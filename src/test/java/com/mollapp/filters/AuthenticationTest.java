@@ -10,8 +10,8 @@ class AuthenticationTest {
     @Test
     void authenticationTest() throws Exception {
         Filter authentication = new Authentication();
-        String name = "Francec";
-        String authenticationMsg = tapSystemOut(() -> { authentication.execution(name);});
+        String user = "Francec";
+        String authenticationMsg = tapSystemOut(() -> { authentication.execution(user);});
         assertEquals("Autenticación OK para Francec",
                         authenticationMsg.trim());
     }

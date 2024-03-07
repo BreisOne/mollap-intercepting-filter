@@ -9,7 +9,7 @@ class VehicleTest {
 
     @Test
     void vehicleTest() throws Exception{
-        Vehicle car = new Vehicle();
+        Target car = new Vehicle();
         String user = "Francesc";
         String carMsg = tapSystemOut(()->{car.execution(user);});
         assertEquals("Puerta abierta Francesc!", carMsg.trim());

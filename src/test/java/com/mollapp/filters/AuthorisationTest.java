@@ -9,8 +9,8 @@ class AuthorisationTest {
     @Test
     void authorisationTest() throws Exception{
         Filter authorization = new Authorisation();
-        String name = "Francesc";
-        String authorizationMsg = tapSystemOut(() -> { authorization.execution(name);});
+        String user = "Francesc";
+        String authorizationMsg = tapSystemOut(() -> { authorization.execution(user);});
         assertEquals("Autorización OK para Francesc",authorizationMsg.trim());
     }
 }
