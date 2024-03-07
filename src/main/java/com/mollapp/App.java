@@ -21,8 +21,8 @@ public final class App {
          * Añadir al sistema las tareas que queremos que el sistema
          * ejecute al recibir la peticion del cliente.
          */
-        tasksProgrammer.setTask(new Authentication());
-        tasksProgrammer.setTask(new Authorisation());
+        //tasksProgrammer.setTask(new Authentication());
+        //tasksProgrammer.setTask(new Authorisation());
 
         /**
          * Configuracion de la app cliente para que
@@ -30,7 +30,7 @@ public final class App {
          * envie el mensaje al sistema.
          */
         Mollapp mollapp = new Mollapp();
-        mollapp.setTasksProgrammer(tasksProgrammer);
-        mollapp.sendRequest("Francesc");
+        //mollapp.setTasksProgrammer(tasksProgrammer);
+        //mollapp.sendRequest("Francesc");
     }
 }
