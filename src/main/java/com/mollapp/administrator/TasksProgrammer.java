@@ -1,11 +1,11 @@
 package com.mollapp.administrator;
 
+import com.mollapp.filters.Filter;
 import com.mollapp.targets.Target;
-import com.mollapp.targets.Vehicle;
 
 public class TasksProgrammer {
     private Target vehicle;
-    private Tasks tasks = null;
+    private Tasks tasks = new Tasks();
 
     public TasksProgrammer(Target vehicle) {
         this.vehicle = vehicle;
@@ -13,8 +13,8 @@ public class TasksProgrammer {
     public Tasks getTasks(){
         return this.tasks;
     }
-    public void setTasks(Tasks tasks){
-        this.tasks = tasks;
+    public void setTask(Filter task){
+        tasks.addTask(task);
     }
 
     public void executeTasks(String user){

@@ -40,9 +40,10 @@ class TasksTest {
         Target car = new Vehicle();
         Tasks tasks = new Tasks();
         String user = "Francesc";
-        tasks.setTarget(car);
+
         tasks.addTask(new Authentication());
         tasks.addTask(new Authorisation());
+        tasks.setTarget(car);
 
         String tasksMsg = tapSystemOut(() -> { tasks.execution(user);});
         System.out.println(tasksMsg);

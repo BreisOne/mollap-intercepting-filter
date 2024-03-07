@@ -13,22 +13,20 @@ class TasksProgrammerTest {
     @Test
     void getTasksTest(){
         Target vehicle = new Vehicle();
-        Tasks tasks = new Tasks();
         TasksProgrammer tasksProgrammer = new TasksProgrammer(vehicle);
-        tasksProgrammer.setTasks(tasks);
+        tasksProgrammer.setTask(new Authentication());
+        tasksProgrammer.setTask(new Authentication());
 
-        assertTrue(tasksProgrammer.getTasks() != null);
+        assertTrue(tasksProgrammer.getTasks().getTasks().size() == 2);
     }
     @Test
     void executionTest(){
         Target vehicle = new Vehicle();
         String user = "Francesc";
-        Tasks tasks = new Tasks();
-        tasks.addTask(new Authentication());
-        tasks.addTask(new Authorisation());
 
         TasksProgrammer tasksProgrammer = new TasksProgrammer(vehicle);
-        tasksProgrammer.setTasks(tasks);
+        tasksProgrammer.setTask(new Authentication());
+        tasksProgrammer.setTask(new Authorisation());
 
         tasksProgrammer.executeTasks(user);
     }
