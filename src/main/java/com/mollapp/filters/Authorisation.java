@@ -6,7 +6,7 @@ public class Authorisation implements Filter{
     }
 
     @Override
-    public void execution(String name) {
-        System.out.println("Autorización OK para " + name);
+    public void execution(String user) {
+        System.out.println("Autorización OK para " + user);
     }
 }
